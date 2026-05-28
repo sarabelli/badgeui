@@ -55,7 +55,7 @@ function tick() {
 
     elements.hh.textContent = pad(now.getHours());
     elements.mm.textContent = pad(now.getMinutes());
-    elements.ss.textContent = pad(now.getSeconds());
+    
     elements.date.textContent = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
 }
 
@@ -142,7 +142,7 @@ function setConnectionState(service, isConnected) {
     if (service === 'reader') {
         setServiceStatus(
             elements.readerStatus,
-            isConnected ? 'Reader online' : 'Reader offline',
+            isConnected ? 'Attivo' : 'Reader offline',
             isConnected ? 'online' : 'error',
         );
     } else {
