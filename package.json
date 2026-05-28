@@ -1,0 +1,13 @@
+{
+  "name": "totemgui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start:web": "node server.js",
+    "start:verify": "node mock-verification/server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}

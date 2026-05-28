@@ -1,0 +1,33 @@
+{
+  "authorizedTokens": [
+    "totem-device-01",
+    "totem-device-02"
+  ],
+  "records": {
+    "CIE-977884595015": {
+      "name": "Sara",
+      "surname": "Belli",
+      "class": "4 A Informatica"
+    },
+    "CNS-6160035860830008": {
+      "name": "Luca",
+      "surname": "Ferri",
+      "class": "5 B Elettronica"
+    },
+    "CNS-AA11223344556677": {
+      "name": "Giulia",
+      "surname": "Rinaldi",
+      "class": "3 C Liceo Scientifico"
+    },
+    "NTAG213-04A1B2C3D4E5F6": {
+      "name": "Marco",
+      "surname": "Conti",
+      "class": "2 D Meccanica"
+    },
+    "FP-1F2E3D4C5B6A798001122334": {
+      "name": "Elena",
+      "surname": "Marini",
+      "class": "1 A Amministrazione"
+    }
+  }
+}

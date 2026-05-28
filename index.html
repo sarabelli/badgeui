@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="it" translate="no">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Totem Presenze</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="totem" aria-label="Totem badge reader">
+            <div class="topbar">
+                <img
+                    src="logoScuola.png"
+                    alt="Logo"
+                    class="logo"
+                />
+            </div>
+
+            <div class="clock">
+                <div class="time">
+                    <span id="hh">--</span><span class="colon">:</span
+                    ><span id="mm">--</span><span class="colon">:</span
+                    ><span id="ss">--</span>
+                </div>
+                <div class="date" id="dt">-- --------- ----</div>
+            </div>
+
+            <div class="nfc">
+                <div class="rings">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                        <rect
+                            x="4"
+                            y="13"
+                            width="30"
+                            height="22"
+                            rx="3.5"
+                            stroke="#fff"
+                            stroke-width="2"
+                        />
+                        <rect
+                            x="9"
+                            y="19"
+                            width="10"
+                            height="7"
+                            rx="2"
+                            fill="#fff"
+                            opacity=".5"
+                        />
+                        <path
+                            d="M39 17 Q44 26 39 35"
+                            stroke="#fff"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                        <path
+                            d="M43 13 Q51 26 43 39"
+                            stroke="#fff"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            opacity=".3"
+                        />
+                    </svg>
+                </div>
+
+                <div class="nfc-main" id="scanHeadline">Avvicina il documento al lettore</div>
+                <div class="nfc-sub" id="scanSubline">CIE · Tessera sanitaria · Badge</div>
+            </div>
+
+            <div class="bottombar">
+                <div class="services">
+                    <span class="service-status" id="readerStatus">
+                        <span class="dot"></span>
+                        Reader offline
+                    </span>
+                    <span class="service-status" id="verifyStatus">
+                        <span class="dot"></span>
+                        Verify offline
+                    </span>
+                </div>
+            </div>
+
+            <div class="ov" id="ov" aria-live="polite" aria-atomic="true">
+                <div class="ov-success" id="successView">
+                    <div class="cwrap">
+                        <div class="rip"></div>
+                        <div class="rip"></div>
+                        <div class="rip"></div>
+
+                        <div class="ccirc">
+                            <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+                                <polyline class="cpath" points="6,19 14,27 30,10" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="s-nome" id="sn">-</div>
+                    <div class="s-classe" id="sc">-</div>
+                    <div class="s-ora" id="so">--:--:--</div>
+                    <div class="s-label">Presenza registrata</div>
+                </div>
+
+                <div class="ov-error" id="errorView">
+                    <div class="e-title">Errore</div>
+                    <div class="e-message" id="errorMessage">-</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
