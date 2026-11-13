@@ -73,7 +73,7 @@ body {
 }
 
 .time {
-    font-size: clamp(52px, 13.5vw, 118px);
+    font-size: clamp(64px, 18vw, 156px);
     font-weight: 900;
     color: #fff;
     letter-spacing: -0.05em;
@@ -392,7 +392,7 @@ body {
         border-radius: 0;
     }
     .time {
-        font-size: clamp(40px, 12vw, 72px);
+        font-size: clamp(56px, 16vw, 132px);
     }
     .e-message {
         font-size: 24px;
