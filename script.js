@@ -1,18 +1,3 @@
-const months = [
-    'gennaio',
-    'febbraio',
-    'marzo',
-    'aprile',
-    'maggio',
-    'giugno',
-    'luglio',
-    'agosto',
-    'settembre',
-    'ottobre',
-    'novembre',
-    'dicembre',
-];
-
 const state = {
     config: null,
     sockets: {
@@ -32,9 +17,7 @@ const elements = {
     hh: document.getElementById('hh'),
     mm: document.getElementById('mm'),
     ss: document.getElementById('ss'),
-    date: document.getElementById('dt'),
     scanHeadline: document.getElementById('scanHeadline'),
-    scanSubline: document.getElementById('scanSubline'),
     readerStatus: document.getElementById('readerStatus'),
     verifyStatus: document.getElementById('verifyStatus'),
     ov: document.getElementById('ov'),
@@ -55,8 +38,7 @@ function tick() {
 
     elements.hh.textContent = pad(now.getHours());
     elements.mm.textContent = pad(now.getMinutes());
-    
-    elements.date.textContent = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+    elements.ss.textContent = pad(now.getSeconds());
 }
 
 function formatClock(timestamp) {
@@ -106,30 +88,25 @@ function setServiceStatus(element, label, stateName) {
 function updateIdleText() {
     if (!state.connection.reader && !state.connection.verify) {
         elements.scanHeadline.textContent = 'Connessione ai servizi in corso';
-        elements.scanSubline.textContent = 'Il totem si attivera quando reader e verification saranno online';
         return;
     }
 
     if (!state.connection.reader) {
         elements.scanHeadline.textContent = 'Reader offline';
-        elements.scanSubline.textContent = 'Il servizio verifica e pronto, ma il lettore non sta inviando scansioni';
         return;
     }
 
     if (!state.connection.verify) {
         elements.scanHeadline.textContent = 'Lettore attivo, verifica offline';
-        elements.scanSubline.textContent = 'Le scansioni non possono essere verificate finche il servizio non torna online';
         return;
     }
 
     if (!state.verificationAuthReady) {
         elements.scanHeadline.textContent = 'Verifica in autenticazione';
-        elements.scanSubline.textContent = 'Il servizio di verifica e connesso ma non ancora autorizzato';
         return;
     }
 
     elements.scanHeadline.textContent = 'Avvicina il documento al lettore';
-    elements.scanSubline.textContent = 'CIE · Tessera sanitaria · Badge';
 }
 
 function setConnectionState(service, isConnected) {

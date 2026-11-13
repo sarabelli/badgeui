@@ -10,35 +10,21 @@
     <body>
         <div class="totem" aria-label="Totem badge reader">
 
-            <!-- TOPBAR -->
+            <!-- LOGO -->
             <div class="topbar">
-                <img src="logoScuola.png" alt="Logo" class="logo" />
-                <div class="nfc-badge">NFC</div>
+                <img src="logoScuola.png" alt="ITIS Di Maggio" class="logo" />
             </div>
 
             <!-- CLOCK -->
             <div class="clock">
                 <div class="time">
-                    <span id="hh">--</span><span class="colon">:</span><span id="mm">--</span>
+                    <span id="hh">--</span><span class="colon">:</span><span id="mm">--</span><span class="colon">:</span><span id="ss" class="seconds">--</span>
                 </div>
-                <div class="date" id="dt">-- --------- ----</div>
             </div>
 
             <!-- NFC -->
             <div class="nfc">
-                <div class="rings">
-                    <div class="ring"></div>
-                    <div class="ring"></div>
-                    <div class="ring"></div>
-                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-                        <rect x="4" y="13" width="30" height="22" rx="3.5" stroke="#fff" stroke-width="2"/>
-                        <rect x="9" y="19" width="10" height="7" rx="2" fill="#fff" opacity=".5"/>
-                        <path d="M39 17 Q44 26 39 35" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M43 13 Q51 26 43 39" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".3"/>
-                    </svg>
-                </div>
                 <div class="nfc-main" id="scanHeadline">Avvicina il badge al lettore</div>
-                <div class="nfc-sub" id="scanSubline">CIE · Tessera sanitaria · Badge</div>
             </div>
 
             <!-- BOTTOMBAR -->
